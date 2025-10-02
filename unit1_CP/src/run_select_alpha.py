@@ -45,19 +45,19 @@ def calc_per_word_log_evidence(estimator, word_list):
     --------
     >>> vocab4 = Vocabulary(["a", "b", "c", "d"])
     >>> est = PosteriorPredictiveEstimator(vocab=vocab4, alpha=1.0)
-    >>> np.round(np.exp(calc_per_word_log_evidence(est, ["a"])), 5)
+    >>> float(np.round(np.exp(calc_per_word_log_evidence(est, ["a"])), 5))
     0.25
 
     >>> vocab3 = Vocabulary(["a", "b", "c"])
     >>> est = PosteriorPredictiveEstimator(vocab=vocab3, alpha=0.1)
     >>> log_ev = calc_per_word_log_evidence(est, ["a", "a", "b", "b", "c", "c"])
-    >>> np.round(np.exp(log_ev), 5)
+    >>> float(np.round(np.exp(log_ev), 5))
     0.16438
     >>> log_ev = calc_per_word_log_evidence(est, ["c", "c", "c", "c", "c", "c"])
-    >>> np.round(np.exp(log_ev), 5)
+    >>> float(np.round(np.exp(log_ev), 5))
     0.77812
     >>> log_ev = calc_per_word_log_evidence(est, ["a", "a", "a", "a", "a", "a"])
-    >>> np.round(np.exp(log_ev), 5)
+    >>> float(np.round(np.exp(log_ev), 5))
     0.77812
     '''
     assert isinstance(estimator, PosteriorPredictiveEstimator)
