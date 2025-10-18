@@ -54,6 +54,7 @@ if __name__ == '__main__':
             ppe_va_score = ppe_estimator.score(x_val_VD, t_val_V)
             print("order %2d alpha %6.3f beta %6.3f : %8.4f tr score  %8.4f va score" % (
                 order, alpha, beta, ppe_tr_score, ppe_va_score))
+            score_list.append(ppe_va_score)
 
             # Obtain predicted mean and stddev for PPE estimator
             # at each x value in provided dense grid of size G
@@ -71,7 +72,7 @@ if __name__ == '__main__':
 
         regr_viz_utils.finalize_x_vs_t_plot(
             ppe_axgrid, x_train_ND[:N], t_train_N[:N], x_val_VD, t_val_V,
-            order_list, alpha_list, beta_list)
+            order_list, alpha_list, beta_list, score_list)
         plt.savefig("fig1d_order%02d_viz_predictions.jpg" % order,
             bbox_inches='tight', pad_inches=0)
         plt.show()
