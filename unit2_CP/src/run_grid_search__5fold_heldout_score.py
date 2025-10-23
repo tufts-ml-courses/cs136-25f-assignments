@@ -99,6 +99,10 @@ def main(block=False):
             score_per_order.append(best_score)
             test_score_per_order.append(test_score)            
 
+        # record test_score_per_order for autograder
+        all_va_score_per_order.append(score_per_order)
+        all_test_score_per_order.append(test_score_per_order)
+
         if N == Nsm:
             # Create Fig 2a
             key_order_list = [1, 4, 10]
@@ -120,10 +124,6 @@ def main(block=False):
             plt.savefig(fig2a_path,
                 bbox_inches='tight', pad_inches=0)
             print("Saved figure: ", fig2a_path)
-
-            # record test_score_per_order for autograder
-            all_va_score_per_order.append(score_per_order)
-            all_test_score_per_order.append(test_score_per_order)
 
         # Add line to Fig 2b
         plt.figure(score_vs_N_fig.number)
@@ -161,7 +161,6 @@ def main(block=False):
         print("test score = % 9.7f" % (
             best_estimator_overall.score(x_test_ND, t_test_N) / t_test_N.size))
         print("required time = %.2f sec" % (time.time() - start_time_sec))
-
 
     ## Finalize figure 2b
     plt.figure(score_vs_N_fig.number)

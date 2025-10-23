@@ -13,7 +13,6 @@ import numpy as np
 import pandas as pd
 import time
 
-
 import matplotlib.pyplot as plt
 import seaborn as sns
 sns.set_style("ticks")
@@ -93,6 +92,9 @@ def main(block=False):
             test_score = default_score + order/10 + (N-20)/200 # TODO FIXME
             test_score_per_order.append(test_score)
 
+        # record test_score_per_order for autograder
+        all_ev_score_per_order.append(ev_score_per_order)
+        all_test_score_per_order.append(test_score_per_order)
 
         if N == Nsm:
             ## Create Fig 3a
