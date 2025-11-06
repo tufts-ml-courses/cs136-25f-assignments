@@ -1,0 +1,121 @@
+\documentclass[10pt]{article}
+
+%%% Doc layout
+\usepackage{fullpage} 
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{graphicx}       % figure graphics
+\usepackage{microtype}      % microtypography
+\usepackage{parskip}
+\usepackage{times}
+
+
+%% Hyperlinks always black, no weird boxes
+\usepackage[hyphens]{url}
+\usepackage[colorlinks=true,allcolors=black,pdfborder={0 0 0}]{hyperref}
+
+%%% Math typesetting
+\usepackage{amsmath,amssymb}
+
+%%% Write out problem statements in purple, solutions in black
+\usepackage{xcolor}
+\newcommand{\officialdirections}[1]{{\color{purple} #1}}
+
+%%% Avoid automatic section numbers (we'll provide our own)
+\setcounter{secnumdepth}{0}
+
+
+%% --------------
+%% Header
+%% --------------
+\usepackage{fancyhdr}
+\fancyhf{}
+\setlength{\headheight}{15pt}
+\fancyhead[C]{\ifnum\value{page}=1 Tufts CS 136 - 2025f - CP3 Submission \else \fi}
+\fancyfoot[C]{\thepage} % page number
+\renewcommand\headrulewidth{0pt}
+\pagestyle{fancy}
+
+%% --------------
+%% Begin Document
+%% --------------
+\begin{document}
+
+~\\ %% add vertical space
+{\Large{\bf Student Name: TODO}}
+
+~\\ %% add vertical space
+{\bf Collaboration Statement:}
+
+Total hours spent: TODO
+
+I consulted the following human, textbook, or AI resources:
+\begin{itemize}
+\item TODO
+\item TODO
+\item $\ldots$	
+\end{itemize}
+
+By turning this document in, I attest that I have followed the 
+\href{https://www.cs.tufts.edu/cs/136/2025f/index.html#collaboration}{[CS 136 Collaboration Policy]}. All solutions represent my own work. No solution text in this document was directly provided by other humans or artificial agents. 
+
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+\newpage
+
+\subsection{1a}
+
+\renewcommand{\figurename}{Fig.}
+\renewcommand{\thefigure}{1a}
+ \begin{figure}[!h]
+     \centering
+     \includegraphics[width=0.95\textwidth]{example-image-a.pdf}
+     \label{fig:1a}
+\caption{
+TODO your caption
+}%endcaption
+ \end{figure}
+
+\subsection{1b}
+\officialdirections{
+    Suppose for a different problem (a different target distribution) you implement a RandomWalk sampler.
+    You find that setting rw\_stddev=100.0 yields an acceptance rate of around 0.8 after running 1 chain for 10,000 samples. Should you be confident your MCMC chain has converged? Justify your answer.}
+
+TODO your answer
+
+\newpage
+
+\subsection{2a}
+
+\renewcommand{\figurename}{Fig.}
+\renewcommand{\thefigure}{2a}
+\begin{figure}[!h]
+     \centering
+     \includegraphics[width=0.6\textwidth]{example-image-a.pdf}
+     \label{fig:2a}
+\caption{
+TODO your caption
+}%endcaption
+ \end{figure}
+ 
+\subsection{2b}
+\officialdirections{
+    Report the per-example score of models with the simple and flexible feature functions on the provided test set. Please report to two decimal places.}
+
+\begin{verbatim}
+    model   poly_order num_bases  test score
+    simple           0         0  TODO FILL
+    flexible         2         5  TODO FILL
+\end{verbatim}
+
+\newpage
+
+\subsection{2c}
+\officialdirections{
+    Provide your implementation of calc\_score as a Python function in your report.}
+
+\begin{verbatim}
+TODO your code goes here
+\end{verbatim}
+
+\end{document}
