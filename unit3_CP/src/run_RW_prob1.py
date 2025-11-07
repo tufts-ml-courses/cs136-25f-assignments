@@ -4,12 +4,9 @@ Purpose
 Sample from a 2-dim. Normal distribution using a Random Walk Sampler.
 This is the Metropolis MCMC algorithm with a Gaussian proposal with controllable stddev
 
-Target distribution:
-# mean
->>> mu_D = np.asarray([-1.0, 1.0])
-# covariance
->>> cov_DD = np.asarray([[2.0, 0.95], [0.95, 1.0]])
-
+Target distribution: 2-dim Gaussian with mean and covariance:
+* mu_D = np.asarray([-1.0, 1.0])
+* cov_DD = np.asarray([[2.0, 0.95], [0.95, 1.0]])
 '''
 
 import numpy as np

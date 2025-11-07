@@ -23,10 +23,13 @@ class RandomWalkSampler(object):
     # Draw samples starting a specified initial value
     >>> z_D_list, info = sampler.draw_samples(np.zeros(2), 30000)
 
-    # Use samples in to estimate mean of the distribution
-    >>> np.mean(np.vstack(z_D_list), axis=0)
-    array([-0.00954532,  0.01338581])
-
+    # Use samples to estimate mean of target distribution
+    # Should be close to true mean of all zeros: [0.0, 0.0]
+    >>> mean_D = np.mean(np.vstack(z_D_list), axis=0)
+    >>> print("%.4f" % mean_D[0])
+    -0.0095
+    >>> print("%.4f" % mean_D[1])
+    0.0134
     >>> info['accept_rate']
     0.7553
 
