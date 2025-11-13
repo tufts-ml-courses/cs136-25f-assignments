@@ -2,13 +2,13 @@
 
 Instructions for this assignment are here:
 
-https://www.cs.tufts.edu/cs/136/2024s/cp3.html
+https://www.cs.tufts.edu/cs/136/2025f/cp3.html
 
 # Install
 
 Following the instructions here for the standard env used throughout this course:
 
-https://www.cs.tufts.edu/cs/136/2024s/setup_python_env.html
+https://www.cs.tufts.edu/cs/136/2025f/setup_python_env.html
 
 # Data Analysis Task
 
