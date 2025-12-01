@@ -31,6 +31,8 @@ To verify your starter code, you can run
 
 2)  python plot_history_for_many_runs.py 
 
-**Expected result**
+You should see a plot like that below where everything converges after about 2 iterations.
+
+**Expected result** (note: uses different K values than used in fall 2025)
 
 <img width="1182" alt="image" src="https://user-images.githubusercontent.com/2365444/230529668-1ca55236-8a4a-4349-bea6-36fc4ea8ca94.png">
