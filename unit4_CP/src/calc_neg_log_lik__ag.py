@@ -26,8 +26,8 @@ array([[-1., -1.],
 
 ## Neg. likelihood of empty dataset should be zero
 >>> empty_ND = np.zeros((0,D))
->>> calc_neg_log_lik(empty_ND, log_pi_K, mu_KD, stddev_KD)
--0.0
+>>> print("%.3f" % calc_neg_log_lik(empty_ND, log_pi_K, mu_KD, stddev_KD))
+-0.000
 
 ## Neg. likelihood of dataset of all zeros should be large
 >>> N = 4
